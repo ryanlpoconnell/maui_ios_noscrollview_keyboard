@@ -57,4 +57,10 @@
 		<PackageReference Include="PureWeen.Maui.FixesAndWorkarounds" Version="1.4.6" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Controls\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Controls\" />
+	</ItemGroup>
 </Project>

@@ -1,43 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Scroll.Controls"
              x:Class="Scroll.MainPage">
 
     <ScrollView BackgroundColor="Yellow" VerticalOptions="FillAndExpand">
-        <VerticalStackLayout
-            Spacing="25"
+          <controls:KeyboardView
+            BackgroundColor="Orange"
+            RowSpacing="25"
             Padding="30,0"
-            VerticalOptions="FillAndExpand">
+            VerticalOptions="FillAndExpand"
+            
+            >
+            <controls:CompatGrid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+
+            </controls:CompatGrid.RowDefinitions>
+           
 
             <Image
+                controls:CompatGrid.Row="0"
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
+                 controls:CompatGrid.Row="1"
                 Text="Hello, World!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Label
+                controls:CompatGrid.Row="2"
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Entry Placeholder="Test me" />
+            <Entry
+                controls:CompatGrid.Row="3"
+                Placeholder="Test me" BackgroundColor="Green"
+                   
+                   />
 
             <Button
+                controls:CompatGrid.Row="4"
+                HeightRequest="100"
                 x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Click me"               
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
+        </controls:KeyboardView>
     </ScrollView>
 
 </ContentPage>
