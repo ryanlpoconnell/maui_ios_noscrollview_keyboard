@@ -46,7 +46,7 @@ public static class MauiProgram
 //        builder.ConfigureShellWorkarounds();
 //        builder.ConfigureTabbedPageWorkarounds();
 //        builder.ConfigureEntryNextWorkaround();
-//        builder.ConfigureKeyboardAutoScroll();
+        builder.ConfigureKeyboardAutoScroll();
 //        builder.ConfigureFlyoutPageWorkarounds();
 
 //#if ANDROID
